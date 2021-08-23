@@ -1,0 +1,26 @@
+<div class="postSection sitemaps" id="sitemaps">
+  <div class="sitemapBox">
+    <h4 class="sitemapTitle">Your Label</h4>
+    <div class="sitemapContent">
+      <ol>
+        <li><a href="#" title="Post 1">Post 1</a></li>
+        <li><a href="#" title="Post 2">Post 2</a></li>
+        <li><a href="#" title="Post 3">Post 3</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<style>
+  .sitemaps{font-size:14px}
+  .sitemapBox{padding:15px;border:1px solid var(--content-border);border-radius:5px}
+  .sitemapBox:not(:last-child){margin-bottom:20px}
+  .postEntry .sitemapTitle{margin-top:0; font-size:14px;font-weight:400;font-family:var(--body-font)}
+  .sitemapTitle:before{content:'Label: '; font-size:90%;opacity:.8}
+  .sitemaps ol{list-style:none;margin:0;padding:0;counter-reset:sitemap-count}
+  .sitemaps li{display:flex;align-items:baseline}
+  .sitemaps li:not(:last-child){margin-bottom:0}
+  .sitemaps li:before{content:counter(sitemap-count) '.';counter-increment:sitemap-count;flex-shrink:0;width:25px;font-size:13px;font-family:var(--font-body);line-height:normal; opacity:.7}
+
+  .darkMode .sitemapBox{border-color:rgba(255,255,255,.1)}
+</style>
